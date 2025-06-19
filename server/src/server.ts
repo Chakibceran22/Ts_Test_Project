@@ -8,6 +8,6 @@ app.get("/api/health", (req, res) => {
         message: "Server is running"
     });
 });
-app.listen(5678, () => {
-    console.log("Server is running on port 5678");
+app.listen(5000, () => {
+    console.log("Server is running on port 5000");
 })

@@ -13,7 +13,7 @@ class UserController {
                 where :{ email}
             }) ;
             if (existingUser) {
-                res.status(400).sendError("User already exists with this email");
+                res.status(400).send({ success: false, message: "User already exists with this email" });
                 return;
             }
 
@@ -43,3 +43,5 @@ class UserController {
     }
     
 }
+
+export const userController  = new UserController();
